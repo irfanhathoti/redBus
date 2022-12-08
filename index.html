@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        //promises
+
+        function myDisplay(name) {
+            console.log(name)
+        }
+
+        let myPromise = new Promise((myResolve,myReject)=>{
+            let x = 'name'
+            if(x!=''){
+                myResolve('success')
+            }else{
+                myReject('Rejected')
+            }
+        })
+
+        myPromise.then(
+            function(value){
+                myDisplay(value)
+            },function(error){
+                myDisplay(error)
+            }
+        )
+
+        //call back function
+
+        function Data(a){
+            console.log(a)
+        }
+
+        function add(n1,n2,callback){
+            let sum = n1 + n2
+            callback(sum)
+        }
+
+        add(2,3,Data)
+
+
+    </script>
+    <style>
+        h1{
+            cursor:zoom-out;
+        }
+    </style>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+<h1>fgchj</h1>
+</body>
+
+</html>

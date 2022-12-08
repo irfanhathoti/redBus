@@ -1,0 +1,201 @@
+.bookDetails{
+	margin-top: 5%;
+}
+
+
+
+.travel_detail{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px solid grey;
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 6px;
+    padding: 15px;
+}
+.contact_detail{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    border: 1px solid grey;
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 6px;
+    padding: 15px;
+}
+/* .child{
+    width: 300px;
+}
+.child1{
+    width: 360px;
+    margin-left: 20px;
+}
+.child2{
+    width: 230px;
+    margin-left: 20px;
+} */
+
+#floatingInput{
+	border-radius: 0px;
+
+}
+#floatingPassword{
+	border-radius: 0px;
+	width: 350px;
+}
+#floatingSelect{
+	border-radius: 0px;
+}
+.addTraveler{
+	width: 110px;
+	/* margin-left: 20px; */
+	border-radius: 0px;
+	height: 58px;
+
+}
+.name{
+	width: 350px;
+}
+
+.footer{
+	display: flex;
+	flex-wrap: wrap;
+}
+footer{
+	background-color: rgba(0, 0, 0, 0.904);
+
+}
+
+
+.box{
+	height: 250px;
+	width: 350px;
+	color: white;
+	margin-left: 50px;
+	padding: 10px;
+}
+.text{
+	color:white;
+	font-size: x-large;
+	font-family: sans-serif;
+}
+.fa-bus-simple{
+    color: gray;
+}
+.fa-star-half-stroke{
+    color: gold;
+}
+.border1{
+	/* height: 10px; */
+	width: 100px;
+	background-color: white;
+	border: 2px white solid;
+}
+.footer-img{
+	margin-top: 20px;
+	margin-left: 50px;
+
+}
+.copyright{
+	color: white;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.856);
+} 
+.fa-location-dot{
+	color: white;
+	transition: transform .6s;
+}
+.fa-location-dot:hover{
+	transform: scale(2.1);
+}
+
+.redbus-loaction{
+	color: white;
+	transition: transform .7s,color .7s;
+}
+.redbus-loaction:hover{
+	color:white;
+	transform: scale(2.1);
+
+}
+.fa-brands{
+	margin: 10px;
+	font-size: 20px;
+	transition: transform .5s,color .5s;
+	cursor: pointer;
+}
+.fa-facebook:hover{
+	transform: scale(1.6);
+	color: rgb(1, 1, 163);
+}
+.fa-instagram:hover{
+	transform: scale(1.6);
+	color: darkred;
+}
+.fa-twitter:hover{
+	transform: scale(1.6);
+	color: dodgerblue;
+}
+
+.footer-img{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+.copyright{
+	color: white;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.856);
+} 
+.fa-location-dot{
+	color: white;
+	transition: transform .6s;
+}
+.fa-location-dot:hover{
+	transform: scale(2.1);
+}
+
+.redbus-loaction{
+	color: white;
+	transition: transform .7s,color .7s;
+}
+.redbus-loaction:hover{
+	color:white;
+	transform: scale(2.1);
+
+}
+.fa-brands{
+	margin: 10px;
+	font-size: 20px;
+	transition: transform .5s,color .5s;
+	cursor: pointer;
+}
+.fa-facebook:hover{
+	transform: scale(1.6);
+	color: rgb(1, 1, 163);
+}
+.fa-instagram:hover{
+	transform: scale(1.6);
+	color: darkred;
+}
+.fa-twitter:hover{
+	transform: scale(1.6);
+	color: dodgerblue;
+}
+
+
+@media screen and (min-width:360px)  and (max-width:600px){
+	.bookDetails{
+		margin-top: 70px;
+	}
+	.form-floating{
+		margin-top: 10px;
+		width: 100% !important;
+	}
+	.btn_parent{
+		margin-top: 10px;
+	}
+
+}
+
+

@@ -1,0 +1,178 @@
+.home-banner {
+	background-image: url('../images/home-banner.png');
+	background-repeat: no-repeat;
+	height: 400px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+form{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.form-floating{
+    height: 50px;
+}
+.form-floating label{
+    padding: 12px 10px;
+}
+label{
+    padding: 0px;
+}
+#floatingPassword{
+    width: 300px;
+    border-radius: 0px;
+    height: 50px;
+}
+#floatingInput{
+    width: 300px;
+    border-radius: 0px;
+    height: 50px;
+}
+#date{
+    border-radius: 0px;
+    height: 50px;
+}
+#searchBus{
+    width: 150px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.bookbus{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card-group{
+    width: 275px;
+    margin: 10px;
+}
+
+
+.footer{
+	display: flex;
+	flex-wrap: wrap;
+}
+footer{
+	background-color: rgba(0, 0, 0, 0.904);
+}
+
+.box{
+	height: 250px;
+	width: 350px;
+	color: white;
+	margin-left: 50px;
+	padding: 10px;
+}
+.text{
+	color:white;
+	font-size: x-large;
+	font-family: sans-serif;
+}
+.fa-bus-simple{
+    color: gray;
+}
+.fa-star-half-stroke{
+    color: gold;
+}
+.border1{
+	/* height: 10px; */
+	width: 100px;
+	background-color: white;
+	border: 2px white solid;
+  
+}
+.footer-img{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+.copyright{
+	color: white;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.856);
+} 
+.fa-location-dot{
+	color: white;
+	transition: transform .6s;
+}
+.fa-location-dot:hover{
+	transform: scale(2.1);
+}
+
+.redbus-loaction{
+	color: white;
+	transition: transform .7s,color .7s;
+}
+.redbus-loaction:hover{
+	color:white;
+	transform: scale(2.1);
+
+}
+.fa-brands{
+	margin: 10px;
+	font-size: 20px;
+	transition: transform .5s,color .5s;
+	cursor: pointer;
+}
+.fa-facebook:hover{
+	transform: scale(1.6);
+	color: rgb(1, 1, 163);
+}
+.fa-instagram:hover{
+	transform: scale(1.6);
+	color: darkred;
+}
+.fa-twitter:hover{
+	transform: scale(1.6);
+	color: dodgerblue;
+}
+
+@media screen and (min-width:360px)  and (max-width:600px)  {
+    .home-banner{
+        background-attachment: local;
+
+    }
+    .bookbus{
+        margin-left: 20px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        margin-top: -100px;
+        width: 300px;
+    }
+    .card-group{
+        display: block;
+
+    }
+    .form-floating{
+        margin-top: 20px;
+        width: 330px;
+    }
+    #date{
+        width: 330px;
+    }
+    #floatingInput{
+        width: 330px;
+    }
+    #floatingPassword{
+        width: 330px;
+    }
+    #searchBus{
+        margin: 5px 6rem;
+    }
+
+
+   
+}
+  

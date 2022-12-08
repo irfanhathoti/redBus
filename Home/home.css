@@ -1,0 +1,200 @@
+/* * {
+	box-sizing: border-box;
+} */
+
+
+
+/* Main Home Banner and Input Search Container r*/
+.home-banner {
+
+
+	width: 100%;
+    height: 400px;
+    background-image: url('../images/home-banner.png');
+    /* background-repeat: no-repeat; */
+    background-size: 100% 100%;
+}
+
+.input-search-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	right: 50%;
+}
+
+.inputIcon {
+	position: absolute;
+	left: 5px;
+	font-size: 25px;
+	vertical-align: middle;
+	color: #AAA;
+}
+
+.inputForm {
+	width: 225px;
+	height: 40px;
+	padding-left: 28px;
+}
+
+.inputLabel-default {
+	position: absolute;
+	left: 30px;
+	color: grey;
+	font-weight: 350;
+	font-size: 15px;
+	margin-top: 8px;
+	transition-duration: 0.3s;
+}
+	.inputLabel-focusIn {
+		position: absolute;
+		left: 30px;
+		color: #9b9b9b;
+		font-size: 10px;	
+		margin-top: 1px;
+	}
+
+/* Coupons Container */
+.holiday-coupon-container {
+	width: 540px;
+	position: absolute;
+	left: 30%;
+	right: 30%;
+	top: -4em;
+}
+	.holiday-coupon-container > .d-table-cell {
+		height: 100px;
+	}
+
+/* Cashback Container */
+.cashback-container > div {
+	transition: transform .2s;
+}
+	.cashback-container > div:hover {
+		transform: scale(1.05);
+	}
+
+/* Introducing On-Time Guarantee & Track My Bus Container
+	& IOS/Android Container & We Promise To Deliver Container */
+.on-time-guarantee,
+.track-my-bus,
+.ios-android-container .d-flex,
+.we-promise-container > div:nth-child(2) {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+	.track-my-bus .d-table-cell {
+		height: 260px;
+	}
+
+/* Convenience On-The-Go IOS/Android Container */
+.ios-android-container > div::after {
+	content: "";
+	background-image: url('../images/city-scape-app-download.png');
+	opacity: 0.2;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+
+
+/* footer */
+
+.footer{
+	display: flex;
+	flex-wrap: wrap;
+}
+footer{
+	background-color: rgba(0, 0, 0, 0.904);
+}
+
+.box{
+	height: 250px;
+	width: 350px;
+	color: white;
+	margin-left: 50px;
+	padding: 10px;
+}
+.text{
+	color:white;
+	font-size: x-large;
+	font-family: sans-serif;
+}
+.border{
+	/* height: 10px; */
+	width: 100px;
+	background-color: white;
+	border: 2px white solid;
+  
+}
+.footer-img{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+.copyright{
+	color: white;
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.856);
+} 
+.fa-location-dot{
+	color: white;
+	transition: transform .6s;
+}
+.fa-location-dot:hover{
+	transform: scale(2.1);
+}
+
+.redbus-loaction{
+	color: white;
+	transition: transform .7s,color .7s;
+}
+.redbus-loaction:hover{
+	color:white;
+	transform: scale(2.1);
+
+}
+.fa-brands{
+	margin: 10px;
+	font-size: 20px;
+	transition: transform .5s,color .5s;
+	cursor: pointer;
+}
+.fa-facebook:hover{
+	transform: scale(1.6);
+	color: rgb(1, 1, 163);
+}
+.fa-instagram:hover{
+	transform: scale(1.6);
+	color: darkred;
+}
+.fa-twitter:hover{
+	transform: scale(1.6);
+	color: dodgerblue;
+}
+
+@media screen and (min-width:360px)  and (max-width:800px){
+	.input-search-container{
+		margin-left: -21%;
+		margin-top: -15%;
+	}
+	.input-search-container div{
+		margin-top: 10px;
+	}
+	
+	form{
+		flex-direction: column;
+	}
+	#searchBus{
+		margin-left: 50px;
+	}
+
+	.holiday-coupon-container{
+		margin-left: -29%;
+	}
+	
+
+}

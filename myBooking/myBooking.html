@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../boostrap/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Home/home.css">
+    <link rel="stylesheet" href="./myBooking.css">
+    <title>My booking</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-danger navbar-dark fixed-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#"><img src="https://i.postimg.cc/zXFNsGkg/redbus-white.png" alt="redBus"
+                    width="60px"></a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="menu-nav">
+                <!-- Left-aligned nav (default) -->
+                <div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="../BusDetails/busdetail.html">Bus
+                                Tickets</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right-aligned nav -->
+                <div class="collapse navbar-collapse justify-content-end" id="menu-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Help</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                                <i class="fas fa-user-circle"></i>
+                                <span id="user-name"></span>
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" id="user" href="../LogIn/login.html">Sign In</a>
+                                <a href="../signup/" id="signup" class="dropdown-item"> Sign Up </a>
+                                <a href="./myBooking.html" class="dropdown-item">My Booking</a>
+                                <button class="dropdown-item" id="logout"> Logout </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- my booking Container -->
+    <div class="table-responsive container">
+        <div class="d-flex justify-content-between container bus_detail">
+            <div class="m-4">
+                <div class="fs-3">
+                    <i class="fa-solid fa-bus-simple"></i> <span> Bus Name </span>
+                </div>
+                <div class="text-muted">
+                    <span class="fs-5">Bangaluru -----> Chennai</span>
+                </div>
+            </div>
+            <div class="m-3">
+                <!-- <div class="text-danger"> Please give the rating here </div> -->
+                <div class="emoji">
+                    <div id="iemoji">
+                        <img src="../images/poor.png" height="20px" width="20px" alt="">
+                        <img src="../images/bad.png" height="20px" width="20px" alt="">
+                        <img src="../images/okay.png" height="20px" width="20px" alt="">
+                        <img src="../images/good.png" height="20px" width="20px" alt="">
+                        <img src="../images/excellent.png" height="20px" width="20px" alt="">
+                    </div>
+                </div>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <input type="button" class="ms-3 btn btn-primary" id="submit_rating"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                        value="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex container justify-content-between border-bottom onward_detail">
+            <div>
+                <div class="text-muted">
+                    From
+                </div>
+                <div class="fs-4">
+                    Bangaluru
+                </div>
+                <div class="text-muted">
+                    04 May 11.30PM
+                </div>
+            </div>
+            <div>
+                <div class="text-muted">
+                    To
+                </div>
+                <div class="fs-4">
+                    Chennai
+                </div>
+                <div class="text-muted">
+                    05 May 5.30aM
+                </div>
+            </div>
+            <div>
+                <div class="text-muted">
+                    BookingID:1523734532
+                </div>
+                <div class="fs-4">
+                    PNR732767325
+                </div>
+            </div>
+        </div>
+        <div class="container d-flex traveller_Detail">
+            <div>
+                <div class="fs-4">
+                    Travelers
+                </div>
+                <div class="fw-bold text-muted">
+                    <i class="fa-solid fa-user"></i> <span>Irfan H (M|23)</span>
+                </div>
+                <div class="fw-bold text-muted">
+                    <i class="fa-solid fa-user"></i> <span>Imran H(M|25)</span>
+                </div>
+            </div>
+            <div class="ms-5">
+                <div class="text-muted">Contact Details</div>
+                <div class="fs-5">
+                    ******7890
+                </div>
+                <div class="fs-5">
+                    ******n@gmail.com
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade m-4 text-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="">
+                        <h4>Thanks for your FeedBack</h4>
+                        <div class="text-success fs-2"> <i class="fa-solid fa-circle-check"></i></div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary mb-4" style="width: 50%; margin: auto;"
+                    onclick="redirectToHome()">ok</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- data table -->
+
+    <div class="table-responsive">
+        <table id="example" class="table table-bordered container" width="100%"></table>
+    </div>
+
+
+
+    <!-- footer container -->
+
+    <footer>
+        <div>
+            <img src="../images/redbus-white.png" height="40px" width="60px" class="footer-img" alt="">
+        </div>
+        <div class="footer">
+            <div class="box">
+                <div class="text">About</div>
+                <div class="border"></div>
+                <p>redBus is the world's largest online bus ticket booking service trusted by over 25 million happy
+                    customers globally. redBus offers bus ticket booking through its website,iOS and Android mobile
+                    apps
+                    for all major routes</p>
+
+            </div>
+            <div class="box">
+                <div class="text">contact </div>
+                <div class="border"></div>
+                <p>
+                <div>
+                    <i class="fa-solid fa-phone"></i>&nbsp;<span>+919945600000</span>
+                </div>
+                <a href="" class="redbus-loaction"> <i class="fa-solid fa-location-dot"></i> Corporate Head
+                    Office-Bangalore </a>
+                </p>
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+            <div class="box">
+                <div class="text">service</div>
+                <div class="border"></div>
+                <p>redBus is the world's largest online bus ticket booking service trusted by over 25 million happy
+                    customers globally. redBus offers bus ticket booking through its website,iOS and Android mobile apps
+                    for all major routes.</p>
+                <div>sanitizing buses</div>
+                <a class="text-light text-decoration-none" href="../feedback/feedback.html">FeedBack</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Adding Bootstrap CDN - Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Adding Bootstrap CDN - Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../boostrap/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+
+
+    <!-- datatable -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- index js files -->
+    <script src="../Home/home.js"></script>
+    <script src="./myBooking.js"></script>
+</body>
+
+</html>

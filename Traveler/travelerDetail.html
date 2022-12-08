@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../boostrap/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../images/redbus-logo.png">
+
+    <link rel="stylesheet" href="./travelerDetail.css">
+    <title>Bus_Detail</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-danger navbar-dark fixed-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#"><img src="https://i.postimg.cc/zXFNsGkg/redbus-white.png" alt="redBus"
+                    width="60px"></a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="menu-nav">
+                <!-- Left-aligned nav (default) -->
+                <div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="#">Bus Tickets</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right-aligned nav -->
+                <div class="collapse navbar-collapse justify-content-end" id="menu-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Help</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                                <i class="fas fa-user-circle"></i>
+                                <span id="user-name"></span>
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" id="user" href="../LogIn/login.html">Sign In</a>
+                                <a href="../signup/" id="signup" class="dropdown-item"> Sign Up </a>
+                                <a href="../myBooking/myBooking.html" class="dropdown-item" id="myBooking">My
+                                    Booking</a>
+                                <button class="dropdown-item" id="logout"> Logout </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="bookDetails container">
+
+    </div>
+    <h3 class="container mt-4 "> Enter Traveler Details </h3>
+    <form action="javascript:void(0)" autocomplete="off">
+        <div class="container">
+            <div class="travel_detail ">
+                <div class="form-floating input_container">
+                    <input type="text" class="form-control name" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating input_container ">
+                    <input type="text" class="form-control age" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Age</label>
+                </div>
+                <div class="form-floating w-25">
+                    <select class="form-select gender" id="floatingSelect" aria-label="Floating label select example"
+                        placeholder="name@example.com">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select>
+                    <label for="floatingSelect">Gender</label>
+                </div>
+                <div class="btn_parent">
+                    <button class="addTraveler btn btn-danger" id="addTraveler">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="container mt-4">Enter Contact Details </h3>
+        <div class="container">
+            <div class="contact_detail">
+                <div class="form-floating w-25">
+                    <input type="text" class="form-control email " id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating input_field w-50 ">
+                    <input type="text" class="form-control contactNo" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Contact No</label>
+                </div>
+                <div class="form-floating w-25">
+                    <input type="text" class="form-control alternateNo" id="floatingInput"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Alternate No</label>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-end container mt-4 mb-3">
+            <a class="btn btn-outline-warning" href="/busBook/busBooking.html">Back</a>
+            &nbsp;
+            <button class="btn btn-outline-success " id="bookNow" data-bs-target="#staticBackdrop">CONTINUE
+                BOOK NOW</button>
+        </div>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Passenger Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Passenger_Name</th>
+                                <th scope="col">Age </th>
+                                <th scope="col">Gender</th>
+                                <th scope="col"> Price </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablebody">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="boredr"></div>
+                <div class="d-flex justify-content-between mb-3 container">
+                    <a href="../paymentMethod/paymentMethod.html"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                        class="btn btn-primary">Payment</a>
+                    <div class="totolPrice">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div>
+            <img src="../images/redbus-white.png" height="40px" width="60px" class="footer-img" alt="">
+        </div>
+        <div class="footer">
+            <div class="box">
+                <div class="text">About</div>
+                <div class="border1"></div>
+                <p>redBus is the world's largest online bus ticket booking service trusted by over 25 million happy
+                    customers globally. redBus offers bus ticket booking through its website,iOS and Android mobile apps
+                    for all major routes</p>
+
+            </div>
+            <div class="box">
+                <div class="text">contact </div>
+                <div class="border1"></div>
+                <p>
+                <div>
+                    <i class="fa-solid fa-phone"></i>&nbsp;<span>+919945600000</span>
+                </div>
+                <a href="" class="redbus-loaction"> <i class="fa-solid fa-location-dot"></i> Corporate Head
+                    Office-Bangalore </a>
+                </p>
+                <div>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+            <div class="box">
+                <div class="text">service</div>
+                <div class="border1"></div>
+                <p>redBus is the world's largest online bus ticket booking service trusted by over 25 million happy
+                    customers globally. redBus offers bus ticket booking through its website,iOS and Android mobile apps
+                    for all major routes.</p>
+                <div>sanitizing buses</div>
+                <a class="text-light text-decoration-none" href="../feedback/feedback.html">FeedBack</a>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">@2020 Copyright:Transport</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Adding Bootstrap CDN - Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Adding Bootstrap CDN - Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../boostrap/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/js/bootstrap.js"></script>
+    <!-- Adding JavaScript -->
+    <script type="text/javascript" src="../Home/home.js"></script>
+    <script src="./travelerDetail.js"></script>
+</body>
+
+</html>

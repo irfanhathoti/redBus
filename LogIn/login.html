@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../boostrap/bootstrap-5.2.0-beta1/bootstrap-5.2.0-beta1/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./login.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="card parent" style="width: 18rem;">
+    <img src="../images/juan-encalada-6mcVaoGNz1w-unsplash (1).jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <form class="form-parent" id="singin" action="javascript:void(0)" autocomplete="off">
+        <div class="child">
+          <h1>Login</h1>
+          <input class="email" type="text" placeholder="Enter User Name" name="" id="email">
+          <div id="email-error"> </div>
+        </div>
+        <div class="child">
+          <input type="password" class="" placeholder="Enter Password" name="" id="password">
+        </div>
+        <div id="pass-error"> </div>
+        <div class="child">
+          <button class="btn btn-outline-success btn-sm"
+            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" type="submit"
+            onclick="Login()">LogIn</button>
+          <a class="forgot" href="../forget/forgot.html">Forgot Password?</a>
+        </div>
+        <div class="">
+          <div class="fs-7 p-2">or signup using</div>
+          <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <p> your new user ? <a class="newaccount" href="../signup/signup.html">signup</a></p>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  
+  <script src="./login.js"></script>
+</body>
+
+</html>

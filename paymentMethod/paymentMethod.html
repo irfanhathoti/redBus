@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../boostrap/bootstrap-5.2.0-beta1/bootstrap-5.2.0-beta1/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./paymentMethod.css">
+    <title>Payment Method</title>
+</head>
+
+<body>
+    <!-- Payment option container -->
+    <div class="main d-flex">
+        <!-- <div class="parent d-flex"> -->
+            <div class="payment_options">
+                <div class="payment_head">
+                    Payment options
+                </div>
+                <div>
+                    <button id="upiBtn" class="button">
+                        <img src="../images/icons8-bhim-25.png" alt=""><span>UPI</span>
+                        <div>Pay Directly From Your bank Account</div>
+                    </button>
+                </div>
+                <div>
+                    <button id="cardBtn" class="button">
+                        <i class="fa-solid fa-credit-card"></i> <span>Credit/Debit/ATM Card</span>
+                        <div>Visa,MasterCard,Rupay And More</div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- credit card payment -->
+            <div id="display_payment"  class="display_payment m-2">
+                <form action="../myBooking/myBooking.html" autocomplete="off">
+                    <div class="">
+                        <label for="" class="">Card Number</label>
+                        <input type="text" class="w-100" id="card_number" oninput="validateCardNo()" placeholder="Enter Your Card Number Here">
+                        <div id="cardNo_error" class="error"></div>
+                    </div>
+                    <div class="">
+                        <label for="" class="">Name on Card </label>
+                        <input type="text" class="w-100" id="nameOfCard" oninput="validateCardName()" placeholder="Enter Your Name on Card">
+                        <div id="cardName_error" class="error"></div>
+                    </div>
+                    <div class="month_year d-flex justify-content-between">
+                        <div>
+                            <label for="">Expiry Month and Year</label>
+                            <div class="d-flex">
+                                <div>
+                                    <select name="" oninput="validateMonth()" id="month">
+                                    </select>
+                                    <div class="error" id="month_error">
+                                    </div>
+                                </div>
+                                <div>
+                                    <select name="" oninput="ValidateYear()" id="year">
+                                        <option value=""> Year </option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                    </select>
+                                    <div class="error" id="year_error">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_cvv">
+                            <label for="">Card CVV</label>
+                            <div>
+                                <input type="text" class="" name="" placeholder="Enter Card CVV" oninput="ValidateCvv()" id="cvv">
+                                <div class="error" id="cvv_error">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between m-3">
+                        <div id="total_price"></div>
+                        <button type="submit" id="payNowBtn"  disabled > PAY NOW </button>
+                    </div>
+                </form>
+                <div class="mt-5">
+                    <b>Note:</b> <span class="text-danger"> Please enter the all detail corectly as we mention and do
+                        not close the tab in between payment progress</span>
+                </div>
+            </div>
+
+            <!-- upi container -->
+            <div class="upi_container">
+                <div class="phone_handy">
+                    <i class="fa-solid fa-mobile fs-4"></i> <span class="fw-bold">Keep your phone handy!</span>
+                </div>
+                <div class="child_upi">
+                    <div class="child">
+                        <div class="input_container">
+                            <label for="" class="fw-bold d-block p-2"> Enter UPI ID </label>
+                            <input type="text" name="" class="" placeholder="mobileNumber@upi" id="upi">
+                            <div class="error upi_error">
+                            </div>
+                        </div>
+                        <div class="input_container" id="input_field">
+                            <label for="" class="fw-bold p-2 ">Enter total amount</label>
+                            <input type="text" class="" placeholder="@amount" id="amount" disabled name=" ">
+                            <div class="error mb-4 amount_error">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <input type="button" name="" id="verifyBtn" class="text-light fw-bolder fs-4" value="VERIFY">
+                        <input type="button" name="" class="text-light fw-bolder fs-4" value="PAY" id="payBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </div>
+                    <div class="d-flex m-4">
+                        <div class="m-4">
+                            <img src="../images/amazon-pay.png" height="30px" class="mt-2" width="60px"
+                                alt="amazon-pay">
+                        </div>
+                        <div class="m-4">
+                            <img src="../images/paytm.svg" height="30px" width="60px" alt="paytm">
+                        </div>
+                        <div class="m-4">
+                            <img src="../images/phonepe-logo.png" height="30px" class="" width="30px" alt="phonePe">
+                        </div>
+                        <div class="m-4">
+                            <img src="../images/bhim-upi.png" height="30px" width="60px" alt="bhim">
+                        </div>
+                        <div class="m-4"><img src="../images/60e7f964711cf700048b6a6a.png" height="30px" width="60px"
+                                alt=""></div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+        <!-- your Booking Details -->
+
+        <div class="booking_details ">
+
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center fs-3">
+                    <div>
+                        Payment Successfully
+                    </div>
+                    <div class="text-success">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" href="../Home/home.html">Ok</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../boostrap/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+    <script src="./paymentmethod.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../boostrap/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./signup.css">
+    <title>Sign_Up</title>
+</head>
+
+<body>
+    <form class="container" id="form" onsubmit="onRegister()" action="javascript:void(0)">
+        <h5 class="title"> Register</h5>
+        <div class="form-group ">
+            <input type="text" class="name" placeholder="Username" id="name" name="name">
+            <div class="error" id="name-error"></div>
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="email" placeholder="Email" id="email" name="email">
+            <div class="error" id="email-error"></div>
+        </div>
+        <div class="form-group">
+            <input type="password" class="password" placeholder="password" id="password" name="password">
+            <div class="error" id="pass-error"></div>
+        </div>
+        <div class="form-group">
+            <input type="password" class="conPass" placeholder="Confirm password" id="conPass" name="conPass">
+            <div class="error" id="conPass-error"></div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between">
+            <div>
+                <button type="submit" class="submit"  id="btSubmit">Submit</button>
+                &nbsp;
+                <button type="reset" onclick="resetForm()" class="reset">Reset</button>
+            </div>
+            <div class="have-acount">
+                <a href="/LogIn/login.html">Already have an account?</a>
+            </div>
+        </div>
+        <div class="other-subscrib">
+            <div class="fs-7 p-2">or signup using</div>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </form>
+    <script src="./signup.js"></script>
+</body>
+
+</html>

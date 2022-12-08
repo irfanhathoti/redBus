@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../boostrap/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./feedback.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-danger navbar-dark fixed-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="./home.html"><img src="https://i.postimg.cc/zXFNsGkg/redbus-white.png"
+                    alt="redBus" width="60px"></a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="menu-nav">
+                <!-- Left-aligned nav (default) -->
+                <div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="../BusDetails/busdetail.html">Bus
+                                Tickets</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right-aligned nav -->
+                <div class="collapse navbar-collapse justify-content-end" id="menu-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Help</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                                <i class="fas fa-user-circle"></i>
+                                <span id="user-name"></span>
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" id="user" href="../LogIn/login.html">Sign In</a>
+                                <a href="../signup/" id="signup" class="dropdown-item"> Sign Up </a>
+                                <a href="../myBooking/myBooking.html" class="dropdown-item" id="myBooking">My
+                                    Booking</a>
+                                <button class="dropdown-item" id="logout"> Logout </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="form-section">
+        <div class="form_container">
+            <form class="form-content-section container">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" oninput="validateName()" id="fbname" placeholder=" Name">
+                    <div id="error_name" class="text-danger"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="fbEmail" oninput="validateEmail()"
+                        aria-describedby="emailHelp" placeholder="E-mail Adderess">
+                    <div id="error_email" class="text-danger"></div>
+                    <small id="emailHelp" class="form-text text-muted">
+                        We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="number">Contact Number(Optional)
+                    </label>
+                    <input type="text" class="form-control" id="number">
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Feedback
+                    </label>
+                    <textarea class="form-control" id="feedbackText" rows="3"></textarea>
+                </div>
+                <input type="button" class="btn btn-primary myclass" id="subBtn" disabled value="Post Comment"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+            </form>
+        </div>
+        <div class="travelLikeKing">
+            <img src="../images/TravelLikeKing.png" alt="">
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center fs-3">
+                    <div>
+                       Thank Your FeedBack
+                    </div>
+                    <div class="text-success">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" href="../Home/home.html">Ok</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section -->
+
+    <footer>
+        <div>
+            <img src="../images/redbus-white.png" height="40px" width="60px" class="footer-img" alt="">
+        </div>
+        <div class="footer">
+            <div class="box">
+                <div class="text">About</div>
+                <div class="border"></div>
+                <p>redBus is the world's largest online bus ticket booking service trusted by over 25 million happy
+                    customers globally. redBus offers bus ticket booking through its website,iOS and Android mobile apps
+                    for all major routes</p>
+
+            </div>
+            <div class="box">
+                <div class="text">contact </div>
+                <div class="border"></div>
+                <p>
+                <div>
+                    <i class="fa-solid fa-phone"></i>&nbsp;<span>+919945600000</span>
+                </div>
+                <a href="" class="redbus-loaction"> <i class="fa-solid fa-location-dot"></i> Corporate Head
+                    Office-Bangalore </a>
+                </p>
+                <div>
+                    <a class="text-light text-decoration-none" href="https://www.facebook.com/redBus.in/"> <i
+                            class="fa-brands fa-facebook"></i> </a>
+                    <a class="text-light text-decoration-none" href="https://www.instagram.com/red/?hl=en"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a class="text-light text-decoration-none" href="https://twitter.com/redbus_in"> <i
+                            class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="text">service</div>
+                <div class="border"></div>
+                <p>redBus is the world's largest online bus ticket booking service trusted by over 25 million happy
+                    customers globally. redBus offers bus ticket booking through its website,iOS and Android mobile apps
+                    for all major routes.</p>
+                <div>sanitizing buses</div>
+                <a class="text-light text-decoration-none" href="../feedback/feedback.html">FeedBack</a>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">@2020 Copyright:Transport</div>
+
+
+
+    <script src="../boostrap/bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Adding Bootstrap CDN - Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Adding Bootstrap CDN - Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Adding JavaScript -->
+
+    <script src="../Home/home.js"></script>
+
+    <script src="./feedback.js"></script>
+</body>
+
+</html>
